@@ -1,13 +1,17 @@
 function sum(a, b) {
-  return;
+
+  return (a || 0) + (b || 0);
 }
 
 function subtract(a, b) {
-  return;
+  return (a || 0) - (b || 0);
 }
 
 function divide(a, b) {
-  return;
+  if (!a || !b) {
+    throw new Error('Cannot devide by 0');
+  }
+  return a / b;
 }
 
 function multiply(a, b) {
